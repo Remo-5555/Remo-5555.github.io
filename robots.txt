@@ -1,0 +1,18 @@
+# Allow all bots to crawl the main site, but block specific sensitive directories
+User-agent: *
+Disallow: /admin/        # Block admin area
+Disallow: /cgi-bin/      # Block cgi-bin folder
+Disallow: /tmp/          # Block temporary files directory
+Disallow: /private/      # Block any private directory
+Disallow: /scripts/      # Block script files
+Disallow: /login/
+Disallow: /register/
+Disallow: /wp-admin/     # For WordPress sites
+Disallow: /account/
+Disallow: /settings/
+
+# Allow everything else
+Allow: /
+
+# Specify the location of your sitemap
+Sitemap: https://yourdomain.com/sitemap.xml
